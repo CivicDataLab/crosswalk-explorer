@@ -1,0 +1,3 @@
+Based on this metadata doc file, I want to create an interactive metadata crosswalk explorer application. Like the user should be able to interact and see OGD, AI Kosh, Dublin Core and DCAT crosswalk mapping. Take assumptions to make the app aesthetically pleasing. Create the app by taking requirements from the companion document.
+This is version two of the docx file pasted above. Make a crosswalk application explorer. A non technical user should be able to find their way around the application. Do not make it too cluttered, while the information should not be lost any way.
+Do not add extra fancy features. Keep it minimal. 
