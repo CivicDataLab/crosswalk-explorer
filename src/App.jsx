@@ -220,13 +220,26 @@ const metadataMappings = [
     notes: 'Same URL used for multiple purposes; DCAT separates these concepts',
     recommendation: 'Separate identifier, landing page, and access URLs'
   },
+  {
+    id: 48,
+    category: 'Identifiers',
+    ogd: 'field_reference_url',
+    aikosh: '(no equivalent)',
+    dublinCore: 'dcterms:source',
+    dcat: 'dcterms:source',
+    level: 'dataset',
+    status: 'exact',
+    notes: 'Direct match; useful for indicating original sources or datasets derived from others. Reference URL of Resource displayed on the dataset page',
+    recommendation: 'Retain this metadata term. Update metadata field in the database itself.'
+  },
+
 
   // Coverage
   {
     id: 18,
     category: 'Coverage',
-    ogd: 'field_asset_jurisdiction',
-    aikosh: 'Spatial Coverage',
+    ogd: 'domain (inferred from domain)/Asset Jurisdiction',
+    aikosh: 'Geographical Coverage',
     dublinCore: 'dcterms:spatial',
     dcat: 'dcterms:spatial',
     level: 'dataset',
@@ -236,9 +249,9 @@ const metadataMappings = [
   },
   {
     id: 19,
-    category: 'Coverage',
+    category: 'Language',
     ogd: '(absent)',
-    aikosh: 'Language',
+    aikosh: '(absent)',
     dublinCore: 'dc:language / dcterms:language',
     dcat: 'dcterms:language',
     level: 'dataset',
@@ -250,15 +263,15 @@ const metadataMappings = [
   // Rights and Licensing
   {
     id: 20,
-    category: 'Rights & Licensing',
+    category: 'India Extension',
     ogd: 'Released Under',
-    aikosh: 'Rights',
-    dublinCore: 'dc:rights / dcterms:rights',
+    aikosh: '(no equivalent)',
+    dublinCore: 'dc:rights / dcterms:rights /dcterms:RightsStatement',
     dcat: 'dcatin:applicableLegislation',
-    level: 'dataset',
+    level: 'dataset/catalog',
     status: 'ambiguous',
     notes: 'Usually "NDSAP". Dublin Core conflates license with rights',
-    recommendation: 'Use controlled vocabulary for legislation references'
+    recommendation: 'Use controlled vocabulary for legislation references.For Dublin Core dcterms:RightsStatement is the most appropriate.'
   },
   {
     id: 21,
@@ -554,11 +567,11 @@ const metadataMappings = [
   {
     id: 44,
     category: 'India Extensions',
-    ogd: 'field_ds_govt_type',
+    ogd: 'field_ds_govt_type/govt_type',
     aikosh: '(no equivalent)',
     dublinCore: 'dcterms:jurisdiction',
     dcat: 'dcatin:jurisdictionLevel',
-    level: 'catalog',
+    level: 'catalog/dataset',
     status: 'exact',
     notes: 'India-specific extension to capture complex federal structure (Central/State/District/Block/Panchayat)',
     recommendation: 'Use controlled vocabulary for government levels - backward compatible structure'
